@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import * as dotenv from 'dotenv';
 import { type EnvironmentVariables } from './EnvironmentVariables.js';
 

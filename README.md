@@ -22,6 +22,14 @@ npm install --global yarn
 ```
 
 ## Development
+npm run generate:graphql
+npm run  build:host-local
+
+git config --global core.autocrlf false
+npm run lint:check --fix
+
+yarn set version stable 
+yarn install
 
 Install dependencies:
 

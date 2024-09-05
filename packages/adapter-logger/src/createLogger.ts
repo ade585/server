@@ -1,5 +1,4 @@
 import { type Logger, type Service } from '@people-eat/server-domain';
-import chalk from 'chalk';
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable no-console */
@@ -13,7 +12,7 @@ export function createLogger(): Logger.Adapter {
             service = inputService;
         },
         debug: (message: any): void => {
-            console.log(chalk.magenta(message));
+            console.log(message);
 
             if (service) {
                 service.log
@@ -26,7 +25,7 @@ export function createLogger(): Logger.Adapter {
             }
         },
         error: (message: any): void => {
-            console.log(chalk.red('Error log:'));
+            console.log('Error log:');
             console.log(message);
 
             if (service) {
@@ -40,7 +39,7 @@ export function createLogger(): Logger.Adapter {
             }
         },
         info: (message: any): void => {
-            console.log(chalk.blue(message));
+            console.log(message);
 
             if (service) {
                 service.log
@@ -53,8 +52,8 @@ export function createLogger(): Logger.Adapter {
             }
         },
         warn: (message: any): void => {
-            console.log(chalk.yellow('Warning log:'));
-            console.log(chalk.yellow(message));
+            console.log('Warning log:');
+            console.log(message);
 
             if (service) {
                 service.log

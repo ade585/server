@@ -12,10 +12,10 @@
     "private": true,
     "version": "0.0.0",
     "dependencies": {
+        "@people-eat/server-adapter-data-source-typeorm": "*",
         "@people-eat/server-adapter-logger": "*",
         "@people-eat/server-app-apollo-server": "*",
         "@people-eat/server-domain": "*",
-        "@people-eat/server-adapter-data-source-typeorm": "*",
         "dotenv": "^16.0.3"
     }
 }

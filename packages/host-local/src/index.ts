@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { createDataSourceAdapter } from '@people-eat/server-adapter-data-source-typeorm';
 import { createEmailAdapter } from '@people-eat/server-adapter-email-nodemailer';
 import { createLogger } from '@people-eat/server-adapter-logger';

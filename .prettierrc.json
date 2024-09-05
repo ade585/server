@@ -10,5 +10,13 @@
                 "tabWidth": 2
             }
         }
-    ]
+    ],
+    "rules": {
+  "prettier/prettier": [
+    "error",
+    {
+      "endOfLine": "auto"
+    }
+  ]
+}
 }
