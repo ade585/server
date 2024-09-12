@@ -18,6 +18,7 @@
         "format": "prettier --write .",
         "format:check": "prettier --check .",
         "lint": "eslint . --ext js,cjs,mjs,ts,cts,mts --fix",
+        "serve:host-local": "nx serve host-local",
         "lint:check": "eslint . --ext js,cjs,mjs,ts,cts,mts",
         "spell:check": "cspell . --no-progress",
         "verify": "nx run-many -t test && nx run-many -t build && yarn format:check && yarn lint:check && yarn spell:check"
@@ -57,7 +58,7 @@
         "packages/*"
     ],
     "engines": {
-        "node": "^22.6.0",
+        "node": "",
         "yarn": "please-use-npm",
         "pnpm": "please-use-npm"
     }
