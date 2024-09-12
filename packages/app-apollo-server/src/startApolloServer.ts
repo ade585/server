@@ -231,6 +231,8 @@ export async function startApolloServerApp({
         path,
     });
 
+    console.log(webSocketServer);
+
     webSocketServer.on('headers', (_headers: string[], request: IncomingMessage & { sessionId?: string }) => {
         if (!request.headers.cookie) throw new Error('Websocket connection without session id was declined');
 
@@ -297,7 +299,7 @@ export async function startApolloServerApp({
         },
     ];
 
-    const server: ApolloServer = new ApolloServer({ plugins, schema });
+    const server: ApolloServer = new ApolloServer({ plugins, schema, introspection: true });
 
     await server.start();
 
@@ -377,7 +379,10 @@ export async function startApolloServerApp({
         response.sendFile(filePath);
     });
 
-    httpServer.listen(port, () => undefined);
+    httpServer.listen(port, () => {
+        console.log(`Server is running on http://localhost:${port}${path}`);
+        console.log(`WebSocket server is running on ws://localhost:${port}${path}`);
+    });
 
     return { path: `http://localhost:${port}${path}` };
 }

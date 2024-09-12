@@ -12,6 +12,8 @@ export interface FindManyAdminsInput {
 export async function findMany({ runtime: { dataSourceAdapter, logger }, context }: FindManyAdminsInput): Promise<Admin[] | undefined> {
     await Authorization.isAdmin({ context, dataSourceAdapter, logger });
 
+    console.log('findMany Request');
+
     const admins: DataSource.DBAdmin[] | undefined = await dataSourceAdapter.adminRepository.findMany({});
 
     if (!admins) return;

@@ -10,7 +10,9 @@ interface CanQueryUserDataInput {
 }
 
 export async function canQueryUserData({ context, userId, dataSourceAdapter }: CanQueryUserDataInput): Promise<void> {
-    if (!context.userId) throw new Error('Unauthorized');
+    // ADE
+    // context.userId = 'aaaaa';
+    if (!context.userId) throw new Error(context.userId + 'Unauthorized' + userId);
 
     if (context.userId === userId) return;
 

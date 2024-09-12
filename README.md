@@ -1,3 +1,5 @@
+https://github.com/people-eat
+
 # PeopleEat Server
 
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/2805a2173f4d437283cd3147df3087ba)](https://app.codacy.com/gh/people-eat/server/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
@@ -36,6 +38,9 @@ Install dependencies:
 ```bash
 yarn
 ```
+
+npx diagnose-endpoint@1.1.0 --endpoint="http://localhost:4000/graphql"
+
 
 [http://localhost:4000/graphql](http://localhost:4000)
 
