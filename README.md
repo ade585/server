@@ -24,13 +24,14 @@ npm install --global yarn
 ```
 
 ## Development
+
 npm run generate:graphql
-npm run  build:host-local
+npm run build:host-local
 
 git config --global core.autocrlf false
 npm run lint:check --fix
 
-yarn set version stable 
+yarn set version stable
 yarn install
 
 Install dependencies:
@@ -40,7 +41,6 @@ yarn
 ```
 
 npx diagnose-endpoint@1.1.0 --endpoint="http://localhost:4000/graphql"
-
 
 [http://localhost:4000/graphql](http://localhost:4000)
 
@@ -55,3 +55,10 @@ npx diagnose-endpoint@1.1.0 --endpoint="http://localhost:4000/graphql"
 ## Technology Stack
 
 -   [TypeScript](https://www.typescriptlang.org)
+
+function execute(args) {
+
+    const a= args.contextValue.body.query;
+    if (args.contextValue.body.operationName !== 'IntrospectionQuery') {
+        console.log(a);
+    }
