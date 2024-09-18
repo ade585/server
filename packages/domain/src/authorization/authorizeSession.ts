@@ -23,6 +23,8 @@ export async function authorizeSession({
     logger,
     sessionId,
 }: AuthorizeSessionInput): Promise<AuthorizeSessionOutput | undefined> {
+    if (sessionId !== undefined) console.log(sessionId);
+
     if (!sessionId) {
         const createdSessionId: string | undefined = await createOneSession({ dataSourceAdapter, logger });
         if (!createdSessionId) {
